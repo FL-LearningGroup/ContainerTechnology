@@ -23,3 +23,7 @@ container主要由Namespace和Cgroup两大机制来保证实现。
 4. Stopped：容器运行或者运行出错，或者stop命令之后。容器处于暂停状态。容器信息保存在平台中，并没有完全被删除。
 
 ## 容器镜像标准(image spec)
++ 文件系统: 以layer保存的文件系统，每个layer保存了和上层之间变化的部分，layer应该保存那些文件，怎么表示增加，修改和删除文件等。
++ config文件: 保存文件系统的层级信息，以及容器的运行时需要的信息（比如环境变量，工作目录，命令参数，mount列表等)。
++ manifest文件：镜像的 config 文件索引，有哪些 layer，额外的 annotation 信息，manifest 文件中保存了很多和当前平台有关的信息。
++ index 文件：可选的文件，指向不同平台的 manifest 文件，这个文件能保证一个镜像可以跨平台使用，每个平台拥有不同的 manifest 文件，使用 index 作为索引。
