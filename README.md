@@ -16,8 +16,10 @@ container主要由Namespace和Cgroup两大机制来保证实现。
 + 易于移植: 一次构建，随处部署。
 + 弹性伸缩：Kubernetes, Swan, Mesos开源，方便，好使的容器管理平台，有着非常强大的弹性管理。
 
-## 容器运行时标准
+## 容器运行时标准 （runtime spec)
 1. Creating: 使用create命令创建容器，创建中。
 2. Created: 创建成功还没有运行。
 3. Running：容器的运行状态，里面的进程处于Up状态，正在执行用户设定的任务。
 4. Stopped：容器运行或者运行出错，或者stop命令之后。容器处于暂停状态。容器信息保存在平台中，并没有完全被删除。
+
+## 容器镜像标准(image spec)
