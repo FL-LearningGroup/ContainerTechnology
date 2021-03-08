@@ -12,3 +12,10 @@ Docker 从 17.03 版本之后分为 CE（Community Edition: 社区版） 和 EE�
 + 自动化测试和持续集成，发布。
 + 在服务型环境中部署和调整数据库或其他的后台应用。:question:
 + 从头编译或者扩展现有的 OpenShift 或 Cloud Foundry 平台来搭建自己的 PaaS 环境。:question:
+
+# Docker Architecture
+
+## Base component
++ 镜像(Image): 相当于一个root文件系统。
++ 容器(Container): 运行镜像的实例。
++ 厂库(Repository): 代码控制中心，用来保存镜像。
